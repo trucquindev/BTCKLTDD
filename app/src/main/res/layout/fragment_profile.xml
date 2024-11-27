@@ -1,0 +1,32 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <!-- Icon Profile -->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_user" />
+
+    <!-- Tên Sinh Viên -->
+    <TextView
+        android:id="@+id/tvStudentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên: Nguyễn Trúc Quỳnh"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:paddingTop="8dp" />
+    <!-- Tên Sinh Viên -->
+    <TextView
+        android:id="@+id/tvStudentMsv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MSV: 22115053122335"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:paddingTop="8dp" />
+</LinearLayout>

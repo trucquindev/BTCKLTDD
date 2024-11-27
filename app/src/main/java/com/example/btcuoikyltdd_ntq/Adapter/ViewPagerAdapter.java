@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.example.btcuoikyltdd_ntq.HomeFragment.HomeFragment;
+import com.example.btcuoikyltdd_ntq.ProfileFragment.ProfileFragment;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     public ViewPagerAdapter(@NonNull FragmentManager fm, int behavior) {
@@ -19,7 +20,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
             case 0:
                 return new HomeFragment();
             case 1:
-                return new HomeFragment();
+                return new ProfileFragment();
             default:
                 return new HomeFragment();
         }
