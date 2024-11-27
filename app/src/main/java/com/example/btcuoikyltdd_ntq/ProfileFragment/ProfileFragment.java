@@ -1,4 +1,4 @@
-package com.example.btcuoikyltdd_ntq.HomeFragment;
+package com.example.btcuoikyltdd_ntq.ProfileFragment;
 
 import android.os.Bundle;
 
@@ -7,19 +7,15 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
 
-import com.example.btcuoikyltdd_ntq.Model.Item;
 import com.example.btcuoikyltdd_ntq.R;
-
-import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link HomeFragment#newInstance} factory method to
+ * Use the {@link ProfileFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class HomeFragment extends Fragment {
+public class ProfileFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -30,7 +26,7 @@ public class HomeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public HomeFragment() {
+    public ProfileFragment() {
         // Required empty public constructor
     }
 
@@ -40,11 +36,11 @@ public class HomeFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeFragment.
+     * @return A new instance of fragment ProfileFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static HomeFragment newInstance(String param1, String param2) {
-        HomeFragment fragment = new HomeFragment();
+    public static ProfileFragment newInstance(String param1, String param2) {
+        ProfileFragment fragment = new ProfileFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,23 +57,10 @@ public class HomeFragment extends Fragment {
         }
     }
 
-    int[] image = {R.drawable.ic_home,R.drawable.ic_home,R.drawable.ic_home};
-    String title[] = {"Ăn uống","Xem phim","Ăn uống"};
-    String[] price = {"200000","260000","500000"};
-    GridView gv;
-    ArrayList<Item> myGridItem;
-    AdapterGridHome adapterGridHome;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
-        gv =view.findViewById(R.id.gird_view_home);
-        myGridItem= new ArrayList<>();
-        for (int i=0; i<title.length;i++){
-            myGridItem.add(new Item(image[i], title[i],price[i]));
-        }
-        adapterGridHome = new AdapterGridHome(requireContext(),R.layout.list_item, myGridItem);
-        gv.setAdapter(adapterGridHome);
-        return view;
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_profile, container, false);
     }
 }
